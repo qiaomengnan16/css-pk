@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+
+        .wrap {
+            display: flex;
+            width: 500px;
+            color: #fff;
+        }
+        .box {
+            height:50px;
+            position: relative;
+            border-radius: 4px;
+        }
+        .boxA {
+            width: 200px;
+            background: linear-gradient(180deg, #4171E1 0%, #4597EE 100%);
+            margin-right: 30px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+        .boxA::before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            right: -16px;
+            background: linear-gradient(180deg, #4171E1 0%, #4597EE 100%);
+            z-index: -1;
+            transform: skew(-20deg);
+            border-radius: 3px;
+
+
+        }
+        .boxB {
+            width: 60px;
+            background: linear-gradient(180deg, #E55247 0%, #EF7F6F 100%);
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+
+        .boxB::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: -10px;
+            background: linear-gradient(180deg, #E55247 0%, #EF7F6F 100%);
+            z-index: -1;
+            transform: skew(-20deg);
+            border-radius: 2px;
+
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="box boxA">123456</div>
+    <div class="box boxB">789456</div>
+</div>
+
+</body>
+</html>
